@@ -1,4 +1,4 @@
-# JFXAI4ATS — AI-Powered Automated Trading Platform
+# Agentic AI Automated Trading Platform
 
 [![GitHub](https://img.shields.io/badge/GitHub-open--source-black?logo=github)](https://github.com/robotics-intelligent-systems/jfxai4ats)
 [![AI](https://img.shields.io/badge/AI-Quantitative%20Trading-blue)](https://github.com/robotics-intelligent-systems/jfxai4ats)
