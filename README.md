@@ -13,6 +13,8 @@
 - [Objectives](#objectives)
 - [Functional Scope](#functional-scope)
 - [Reference Architecture](#reference-architecture)
+- [Requirements and SysML baseline](#requirements-and-sysml-baseline)
+- [Iterative development](#iterative-development)
 - [Core Capabilities](#core-capabilities)
 - [AI and Quantitative Intelligence](#ai-and-quantitative-intelligence)
 - [Trading and Execution](#trading-and-execution)
@@ -78,40 +80,16 @@ The project is therefore positioned as a **reference architecture and technology
 
 The long-term objective is to provide a modular open-source architecture for building automated trading systems in which:
 
-```text
-Market Data
-     │
-     ▼
-Data Engineering
-     │
-     ▼
-Quantitative Models
-     │
-     ├── Machine Learning
-     ├── Deep Learning
-     ├── Reinforcement Learning
-     ├── LLM Agents
-     └── Statistical Models
-     │
-     ▼
-Strategy Engine
-     │
-     ▼
-Risk Engine
-     │
-     ▼
-Execution Engine
-     │
-     ├── FIX
-     ├── Broker APIs
-     ├── Exchange APIs
-     └── Matching Engines
-     │
-     ▼
-Portfolio / Position Management
-     │
-     ▼
-Monitoring + BI + Audit
+```mermaid
+flowchart LR
+  MD["Market data"] --> DATA["Validated data"]
+  DATA --> QUANT["Quant / AI research"]
+  QUANT --> STRAT["Strategy proposal"]
+  STRAT --> RISK{"Deterministic risk"}
+  RISK -->|Reject| AUDIT["Audit and analysis"]
+  RISK -->|Permit| EXEC["Controlled execution"]
+  EXEC --> PORT["Positions and reconciliation"]
+  PORT --> AUDIT
 ```
 
 The architecture emphasizes **modularity, reproducibility, observability, explainability, low latency where required, and separation between research, simulation and live execution**.
@@ -176,59 +154,35 @@ JFXAI4ATS covers the following functional domains:
 
 # Reference Architecture
 
-```text
-┌───────────────────────────────────────────────────────────┐
-│                       Trading Users                       │
-│ Quant Researchers │ Traders │ Risk │ Operations │ Admins │
-└──────────────────────────────┬────────────────────────────┘
-                               │
-                               ▼
-┌───────────────────────────────────────────────────────────┐
-│                    User / API Layer                       │
-│ REST │ WebSocket │ CLI │ Notebook │ Dashboard │ MCP/API   │
-└──────────────────────────────┬────────────────────────────┘
-                               │
-                               ▼
-┌───────────────────────────────────────────────────────────┐
-│                  AI / Agentic Layer                       │
-│ LLM Agents │ Trading Agents │ Research Agents │ RAG       │
-└──────────────────────────────┬────────────────────────────┘
-                               │
-                               ▼
-┌───────────────────────────────────────────────────────────┐
-│                Quantitative Intelligence                   │
-│ ML │ DL │ RL │ Statistical Models │ Feature Engineering  │
-└──────────────────────────────┬────────────────────────────┘
-                               │
-                               ▼
-┌───────────────────────────────────────────────────────────┐
-│                    Strategy Engine                        │
-│ Signal Generation │ Portfolio Construction │ Optimization│
-└──────────────────────────────┬────────────────────────────┘
-                               │
-                               ▼
-┌───────────────────────────────────────────────────────────┐
-│                    Risk Engine                            │
-│ Exposure │ VaR │ Drawdown │ Limits │ Stress │ Compliance │
-└──────────────────────────────┬────────────────────────────┘
-                               │
-                               ▼
-┌───────────────────────────────────────────────────────────┐
-│                  Execution Engine                         │
-│ OMS │ EMS │ Smart Order Routing │ Order Management        │
-└──────────────────────────────┬────────────────────────────┘
-                               │
-             ┌─────────────────┼─────────────────┐
-             ▼                 ▼                 ▼
-         FIX Gateway       Broker APIs       Exchange APIs
-             │                 │                 │
-             └─────────────────┼─────────────────┘
-                               ▼
-┌───────────────────────────────────────────────────────────┐
-│             Market / Exchange Infrastructure              │
-│ Exchanges │ Matching Engines │ Liquidity Providers        │
-└───────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+  USERS["Researchers / traders / risk / operations"] --> API["User and API boundary"]
+  subgraph Research["Research and simulation boundary"]
+    DATA["Data ingestion and provenance"] --> AI["Quant models and AI agents"]
+    AI --> STRAT["Versioned strategy proposal"]
+    STRAT --> SIM["Backtest and paper validation"]
+  end
+  API --> DATA
+  SIM --> POLICY["Reviewed strategy and policy"]
+  subgraph Trading["Controlled trading boundary"]
+    POLICY --> RISK{"Risk limits and authorization"}
+    RISK -->|Permit| OMS["OMS / EMS"]
+    OMS --> ADAPTER["FIX / broker / exchange adapter"]
+    ADAPTER --> RECON["Execution reports and reconciliation"]
+    RISK -->|Deny| AUDIT["Audit / monitoring / BI"]
+    RECON --> AUDIT
+    RECON -->|Position snapshot| RISK
+    KILL["Operator kill switch"] --> RISK
+  end
+  ADAPTER <-->|Orders and reports| VENUE["External venue"]
+  API --> KILL
 ```
+
+---
+
+# Requirements and SysML baseline
+
+The proposed engineering baseline is specified in [high-level requirements](docs/requirements/high-level-specification.md), with requirement IDs, acceptance cases, interface contracts and open decisions. The editable [SysML model](MBSE/SysML/jfxai4ats-high-level.drawio) contains context, requirement, block, internal-block, activity and verification views. This is a documentation baseline awaiting review; no executable trading capability is established.
 
 ---
 
@@ -313,42 +267,36 @@ Candidate platforms include:
 
 The platform can integrate agent-oriented architectures for:
 
-```text
-Research Agent
-      │
-      ├── Market Data Agent
-      ├── News / NLP Agent
-      ├── Quant Agent
-      ├── Strategy Agent
-      ├── Risk Agent
-      ├── Portfolio Agent
-      └── Execution Agent
+```mermaid
+flowchart TB
+  RESEARCH["Research orchestrator"] --> MARKET["Market-data agent"]
+  RESEARCH --> NEWS["News / NLP agent"]
+  RESEARCH --> QUANT["Quant agent"]
+  MARKET --> STRAT["Strategy proposal"]
+  NEWS --> STRAT
+  QUANT --> STRAT
+  STRAT --> RISK["Risk assessment agent"]
+  RISK --> PORT["Portfolio proposal"]
+  PORT --> CTRL["Deterministic policy boundary"]
+  CTRL --> EXEC["Execution service"]
 ```
 
 An agent workflow can follow:
 
-```text
-Observe
-  ↓
-Collect Data
-  ↓
-Analyze Market
-  ↓
-Generate Hypothesis
-  ↓
-Generate Signal
-  ↓
-Risk Evaluation
-  ↓
-Human / Policy Approval
-  ↓
-Order Generation
-  ↓
-Execution
-  ↓
-Monitoring
-  ↓
-Post-Trade Analysis
+```mermaid
+flowchart TB
+  OBS["Observe and collect validated data"] --> ANALYZE["Analyze market"]
+  ANALYZE --> HYP["Version hypothesis and signal"]
+  HYP --> CHECK{"Risk and policy permit?"}
+  CHECK -->|No| REJECT["Record rejection"]
+  CHECK -->|Yes| APPROVE{"Required approval present?"}
+  APPROVE -->|No| HOLD["Hold proposal"]
+  APPROVE -->|Yes| ORDER["Generate idempotent order"]
+  ORDER --> EXEC["Execute in selected environment"]
+  EXEC --> MON["Monitor and reconcile"]
+  MON --> POST["Post-trade analysis"]
+  REJECT --> POST
+  HOLD --> POST
 ```
 
 AI agents should remain subject to deterministic trading limits and explicit risk controls.
@@ -401,22 +349,15 @@ A canonical normalized representation should be used before data is consumed by 
 
 Example:
 
-```text
-External Provider
-       ↓
-Data Adapter
-       ↓
-Normalization
-       ↓
-Validation
-       ↓
-Time Synchronization
-       ↓
-Historical Store
-       ↓
-Feature Store
-       ↓
-Strategy / AI
+```mermaid
+flowchart LR
+  P["External provider"] --> A["Data adapter"]
+  A --> N["Normalize units and timestamps"]
+  N --> V{"Schema and freshness valid?"}
+  V -->|No| Q["Quarantine and audit"]
+  V -->|Yes| S["Versioned historical store"]
+  S --> F["Feature pipeline"]
+  F --> M["Strategy / AI"]
 ```
 
 ---
@@ -458,20 +399,26 @@ Financial Information eXchange connectivity can be implemented using technologie
 
 The conceptual architecture is:
 
-```text
-Trading Strategy
-      ↓
-Order Management System
-      ↓
-Execution Management System
-      ↓
-FIX Gateway
-      ↓
-Broker / Exchange
-      ↓
-Execution Report
-      ↓
-Position Management
+```mermaid
+sequenceDiagram
+  participant S as Strategy
+  participant R as Risk gate
+  participant O as OMS / EMS
+  participant G as FIX / API adapter
+  participant V as Broker / exchange
+  participant P as Reconciliation
+  S->>R: Versioned order intent
+  alt Permit and approval valid
+    R->>O: Authorized intent
+    O->>G: Order with idempotency key
+    G->>V: Submit order
+    V-->>G: Acknowledgement / execution report
+    G-->>O: Normalized report
+    O->>P: Deduplicated fill event
+    P-->>R: Reconciled position snapshot
+  else Denied or stale
+    R-->>S: Rejection and reason
+  end
 ```
 
 ---
@@ -503,20 +450,17 @@ These technologies should be treated as **integration or reference components un
 
 Before deployment to a live environment, strategies should pass through:
 
-```text
-Research
-   ↓
-Historical Backtest
-   ↓
-Walk-Forward Validation
-   ↓
-Paper Trading
-   ↓
-Stress Testing
-   ↓
-Risk Validation
-   ↓
-Controlled Production
+```mermaid
+flowchart LR
+  R["Research"] --> B["Historical backtest"]
+  B --> W["Walk-forward evaluation"]
+  W --> S["Stress and risk validation"]
+  S --> PASS{"Acceptance criteria met?"}
+  PASS -->|No| R
+  PASS -->|Yes| P["Paper trading"]
+  P --> REV{"Evidence reviewed?"}
+  REV -->|No| R
+  REV -->|Yes| C["Controlled production proposal"]
 ```
 
 Simulation capabilities can include:
@@ -770,67 +714,38 @@ Observability
 
 # Data Architecture
 
-```text
-┌─────────────────────────┐
-│ Market Data Providers   │
-└────────────┬────────────┘
-             ↓
-┌─────────────────────────┐
-│ Data Ingestion          │
-└────────────┬────────────┘
-             ↓
-┌─────────────────────────┐
-│ Validation / Cleaning   │
-└────────────┬────────────┘
-             ↓
-┌─────────────────────────┐
-│ Historical Data Lake    │
-└────────────┬────────────┘
-             ↓
-┌─────────────────────────┐
-│ Feature Engineering     │
-└────────────┬────────────┘
-             ↓
-┌─────────────────────────┐
-│ Feature / Model Store   │
-└────────────┬────────────┘
-             ↓
-┌─────────────────────────┐
-│ Quant / AI Models       │
-└─────────────────────────┘
+```mermaid
+flowchart TB
+  P["Market-data providers"] --> I["Ingestion adapters"]
+  I --> V{"Validate schema / time / provenance"}
+  V -->|Invalid| Q["Quarantine"]
+  V -->|Valid| L["Immutable dataset versions"]
+  L --> F["Feature engineering"]
+  F --> FS["Versioned feature store"]
+  FS --> M["Quant / AI models"]
+  M --> MS["Model and experiment registry"]
+  L --> REPLAY["Deterministic historical replay"]
+  MS --> REPLAY
 ```
 
 ---
 
 # AI Architecture
 
-```text
-                    ┌──────────────────┐
-                    │   LLM / VLM      │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                    ┌──────────────────┐
-                    │ Research Agent   │
-                    └────────┬─────────┘
-                             │
-          ┌──────────────────┼──────────────────┐
-          ▼                  ▼                  ▼
-   Market Agent       Quant Agent         Risk Agent
-          │                  │                  │
-          └──────────────────┼──────────────────┘
-                             ▼
-                    ┌──────────────────┐
-                    │ Strategy Agent   │
-                    └────────┬─────────┘
-                             ▼
-                    ┌──────────────────┐
-                    │ Policy / Limits  │
-                    └────────┬─────────┘
-                             ▼
-                    ┌──────────────────┐
-                    │ Execution Agent  │
-                    └──────────────────┘
+```mermaid
+flowchart TB
+  LLM["Replaceable LLM / model endpoint"] --> RES["Research orchestrator"]
+  RES --> MARKET["Market agent"]
+  RES --> QUANT["Quant agent"]
+  RES --> RISK["Risk analysis agent"]
+  MARKET --> STRAT["Structured strategy proposal"]
+  QUANT --> STRAT
+  RISK --> STRAT
+  STRAT --> VALID{"Schema and provenance valid?"}
+  VALID -->|No| AUDIT["Audit rejected proposal"]
+  VALID -->|Yes| POLICY{"Deterministic limits and approval"}
+  POLICY -->|No| AUDIT
+  POLICY -->|Yes| EXEC["Controlled execution service"]
 ```
 
 AI should provide recommendations, predictions or strategy proposals while deterministic controls govern financial execution.
@@ -1081,22 +996,16 @@ Evaluate:
 
 Before enabling live trading:
 
-```text
-Unit Tests
-    ↓
-Integration Tests
-    ↓
-Backtest
-    ↓
-Walk-Forward
-    ↓
-Stress Test
-    ↓
-Paper Trading
-    ↓
-Risk Approval
-    ↓
-Limited Production
+```mermaid
+flowchart LR
+  U["Unit checks"] --> I["Integration checks"]
+  I --> B["Deterministic backtest"]
+  B --> W["Walk-forward and stress"]
+  W --> P["Paper trading"]
+  P --> A{"Risk and operations approval"}
+  A -->|Denied| FIX["Correct and revalidate"]
+  FIX --> U
+  A -->|Granted| PROD["Limited production candidate"]
 ```
 
 ---
@@ -1222,26 +1131,16 @@ jfxai4ats/
 
 Recommended development lifecycle:
 
-```text
-Specification
-      ↓
-Architecture
-      ↓
-Data Design
-      ↓
-Quant Model
-      ↓
-Strategy
-      ↓
-Backtesting
-      ↓
-Risk Validation
-      ↓
-Integration
-      ↓
-Paper Trading
-      ↓
-Production
+```mermaid
+flowchart LR
+  REQ["Requirements and acceptance"] --> ARCH["Architecture and contracts"]
+  ARCH --> DATA["Data and model design"]
+  DATA --> SLICE["Bounded implementation"]
+  SLICE --> VAL["Backtest / risk / integration checks"]
+  VAL --> PAPER["Paper scenario and evidence"]
+  PAPER --> REV{"Engineering review"}
+  REV -->|Changes requested| REQ
+  REV -->|Accepted| NEXT["Baseline and next iteration"]
 ```
 
 Git workflow:
@@ -1263,6 +1162,12 @@ Pull requests should include:
 - performance considerations;
 - risk implications;
 - documentation updates.
+
+---
+
+# Iterative development
+
+[Engineering iteration table](docs/development/iterative-development.md) tracks ATS-MBSE-001 documentation review ([issue #2](https://github.com/robotics-intelligent-systems/jfxai4ats/issues/2)) and ATS-PILOT-002, the proposed offline trade-record and reconciliation pilot ([issue #1](https://github.com/robotics-intelligent-systems/jfxai4ats/issues/1)). AI assists requirements, design, implementation, verification and documentation; engineering reviews acceptance evidence. Maturity remains architecture (~20%) until an executable milestone is demonstrated.
 
 ---
 
@@ -1330,13 +1235,14 @@ The repository should be used to identify current maintainers and contributors.
 
 JFXAI4ATS follows the broader engineering structure used by the Robotics Intelligent Systems repositories:
 
-```text
-MBSE
- └── Arcadia / Capella
-      │
-      ├── CAD
-      ├── CAM
-      └── CAS
+```mermaid
+flowchart TB
+  MBSE["Requirements and MBSE"] --> ARC["Arcadia / Capella architecture"]
+  ARC --> CAD["CAD where applicable"]
+  ARC --> CAM["Manufacturing where applicable"]
+  ARC --> CAS["Simulation and analysis"]
+  CAS --> EVID["Verification evidence"]
+  EVID --> MBSE
 ```
 
 This allows financial trading-system architecture to be connected to a broader Model-Based Systems Engineering methodology.
@@ -1460,26 +1366,19 @@ Rather than representing a single monolithic trading application, the repository
 
 The resulting architecture enables a progression from:
 
-```text
-Financial Data
-      ↓
-Quantitative Research
-      ↓
-AI / ML
-      ↓
-Trading Strategy
-      ↓
-Backtesting
-      ↓
-Risk Management
-      ↓
-Paper Trading
-      ↓
-Broker / Exchange Integration
-      ↓
-Controlled Production
-      ↓
-Business Intelligence
+```mermaid
+flowchart LR
+  D["Financial data"] --> Q["Quant research and AI"]
+  Q --> S["Strategy proposal"]
+  S --> B["Backtest and stress"]
+  B --> R["Deterministic risk"]
+  R --> P["Paper trading"]
+  P --> REV{"Reviewed evidence"}
+  REV -->|Accepted| V["Broker / exchange integration"]
+  REV -->|Revise| Q
+  V --> C["Controlled production candidate"]
+  C --> BI["BI and audit"]
 ```
 
 This approach provides a foundation for developing auditable, modular and extensible AI-powered trading systems while maintaining explicit separation between experimentation, simulation and real financial execution.
+

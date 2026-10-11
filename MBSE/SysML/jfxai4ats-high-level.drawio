@@ -1,0 +1,822 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-10-11T23:20:00.000Z" agent="Codex" version="26.0.0" type="device">
+  <diagram id="01" name="01 Context">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="bdd [Contexto] JFXAI4ATS — baseline propuesta ATS-MBSE-001" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1340" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="platform" value="«block»&#10;B-PLATFORM : JFXAI4ATS&#10;Research · paper · ejecución controlada" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="510" y="340" width="380" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="research" value="«actor»&#10;Investigación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="context-research" value="Hipótesis / datos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="research" target="platform">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="risk" value="«actor»&#10;Riesgo" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="context-risk" value="Política / aceptación" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="risk" target="platform">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ops" value="«actor»&#10;Operaciones" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="460" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="context-ops" value="Parada / resolución" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="ops" target="platform">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="engineering" value="«actor»&#10;Ingeniería" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="620" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="context-engineering" value="Baseline / evidencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="engineering" target="platform">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="provider" value="«external»&#10;Proveedor de mercado" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="180" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-provider" value="Datos / proveniencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="platform" target="provider">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="model" value="«external»&#10;Modelo reemplazable" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="380" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-model" value="Propuestas / fuentes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="platform" target="model">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="venue" value="«external»&#10;Venue simulado / broker" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="580" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-venue" value="Órdenes / reportes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="platform" target="venue">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="Piloto offline sintético; broker/live pendientes de integración y aprobación.&#10;Documentación ≠ implementación ni verificación ejecutada." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="700" width="600" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="02" name="02 Requirements">
+    <mxGraphModel dx="1680" dy="1830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1680" pageHeight="1830" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="req [Necesidades y requisitos] — texto normativo en especificación Markdown" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1620" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SN-01" value="«requirement»&#10;SN-01&#10;Investigación reproducible" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="125" width="370" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-001" value="«requirement»&#10;ATS-F-001 · Datos canónicos&#10;El sistema deberá validar esquema, instrumento, moneda, unidades, timestamp UTC, origen y versión antes de entregar datos a estrategias." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="300" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-001" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-001" target="SN-01">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="12.0" y="397.5" />
+              <mxPoint x="12.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-F-002" value="«requirement»&#10;ATS-F-002 · Proveniencia y replay&#10;El sistema deberá identificar cada dataset por versión y hash y conservar la configuración usada por cada ejecución." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="540" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-002" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-002" target="SN-01">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="12.0" y="637.5" />
+              <mxPoint x="12.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-F-003" value="«requirement»&#10;ATS-F-003 · Propuestas de IA&#10;El sistema deberá convertir recomendaciones de IA en propuestas estructuradas con modelo, versión, fuentes, estrategia y correlación." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="780" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-003" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-003" target="SN-01">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="12.0" y="877.5" />
+              <mxPoint x="12.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-F-004" value="«requirement»&#10;ATS-F-004 · Validación de estrategia&#10;El sistema deberá evaluar estrategias con backtest, separación temporal, costos, slippage y estrés antes de proponer su promoción." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1020" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-004" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-004" target="SN-01">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="12.0" y="1117.5" />
+              <mxPoint x="12.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-N-001" value="«requirement»&#10;ATS-N-001 · Reproducibilidad&#10;El sistema deberá producir un manifiesto de ejecución con versiones, hashes, semilla, reloj y resultados esperados." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1260" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-N-001" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-N-001" target="SN-01">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="12.0" y="1357.5" />
+              <mxPoint x="12.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SN-02" value="«requirement»&#10;SN-02&#10;Control de exposición" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="125" width="370" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-005" value="«requirement»&#10;ATS-F-005 · Riesgo determinista&#10;El sistema deberá evaluar cada intención contra límites versionados de posición, nominal, exposición y pérdida, usando una posición reconciliada vigente." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="300" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-005" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-005" target="SN-02">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="422.0" y="397.5" />
+              <mxPoint x="422.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-F-006" value="«requirement»&#10;ATS-F-006 · Autorización y entornos&#10;El sistema deberá separar research, paper y live y exigir autorización explícita vinculada a estrategia, cuenta, entorno y política." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="540" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-006" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-006" target="SN-02">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="422.0" y="637.5" />
+              <mxPoint x="422.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-F-011" value="«requirement»&#10;ATS-F-011 · Parada de emergencia&#10;El sistema deberá bloquear nuevas órdenes al activar kill switch y registrar el resultado de solicitudes de cancelación." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="780" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-011" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-011" target="SN-02">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="422.0" y="877.5" />
+              <mxPoint x="422.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-N-002" value="«requirement»&#10;ATS-N-002 · Protección de acceso&#10;El sistema deberá aplicar privilegio mínimo, secretos externos al código y separación entre proponer, aprobar y operar." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1020" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-N-002" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-N-002" target="SN-02">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="422.0" y="1117.5" />
+              <mxPoint x="422.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SN-03" value="«requirement»&#10;SN-03&#10;Integridad de órdenes y libro" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="850" y="125" width="370" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-007" value="«requirement»&#10;ATS-F-007 · Ciclo de orden&#10;El sistema deberá conservar estados y transiciones de intención, rechazo, envío, aceptación, fill parcial, fill total, cancelación y fallo." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="850" y="300" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-007" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-007" target="SN-03">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832.0" y="397.5" />
+              <mxPoint x="832.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-F-008" value="«requirement»&#10;ATS-F-008 · Idempotencia&#10;El sistema deberá deduplicar intenciones y reportes y recuperar el estado persistido tras un reinicio." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="850" y="540" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-008" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-008" target="SN-03">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832.0" y="637.5" />
+              <mxPoint x="832.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-F-009" value="«requirement»&#10;ATS-F-009 · Adaptadores&#10;El sistema deberá aislar la semántica externa FIX/API mediante contratos de órdenes, reportes y capacidades del venue." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="850" y="780" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-009" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-009" target="SN-03">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832.0" y="877.5" />
+              <mxPoint x="832.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-F-010" value="«requirement»&#10;ATS-F-010 · Reconciliación&#10;El sistema deberá comparar órdenes, fills, posiciones y efectivo internos con el estado reportado por el venue." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="850" y="1020" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-010" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-010" target="SN-03">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832.0" y="1117.5" />
+              <mxPoint x="832.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-N-003" value="«requirement»&#10;ATS-N-003 · Recuperación segura&#10;El sistema deberá recuperar órdenes y correlaciones durables después de un fallo y reconciliar antes de reactivar envíos." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="850" y="1260" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-N-003" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-N-003" target="SN-03">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832.0" y="1357.5" />
+              <mxPoint x="832.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-N-004" value="«requirement»&#10;ATS-N-004 · Contratos versionados&#10;El sistema deberá versionar esquemas y rechazar versiones incompatibles antes de procesar mensajes." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="850" y="1500" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-N-004" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-N-004" target="SN-03">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832.0" y="1597.5" />
+              <mxPoint x="832.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SN-04" value="«requirement»&#10;SN-04&#10;Evidencia de ingeniería" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="125" width="370" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-012" value="«requirement»&#10;ATS-F-012 · Auditoría y observabilidad&#10;El sistema deberá registrar correlación, decisión, versión de política/modelo, actor, timestamps y cambios de estado sin secretos." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="300" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-F-012" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-F-012" target="SN-04">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1242.0" y="397.5" />
+              <mxPoint x="1242.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-N-005" value="«requirement»&#10;ATS-N-005 · Rendimiento medible&#10;El sistema deberá medir latencia por etapa, throughput y errores con entorno y carga documentados." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="540" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-N-005" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-N-005" target="SN-04">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1242.0" y="637.5" />
+              <mxPoint x="1242.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ATS-N-006" value="«requirement»&#10;ATS-N-006 · Trazabilidad de ingeniería&#10;El proyecto deberá vincular cada requisito con un componente responsable, contrato cuando aplique y caso de verificación versionado." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="780" width="370" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="derive-ATS-N-006" value="«deriveReqt»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ATS-N-006" target="SN-04">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1242.0" y="877.5" />
+              <mxPoint x="1242.0" y="175.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="SN-01..04 derivadas del README y pendientes de validación con actores.&#10;Prioridades, criterios, decisiones abiertas y responsables en docs/requirements/high-level-specification.md." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1750" width="1620" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="03" name="03 Blocks">
+    <mxGraphModel dx="1500" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="bdd [Descomposición] — composición del sistema y soporte de ingeniería" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1440" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="B-PLATFORM" value="«block»&#10;B-PLATFORM : JFXAI4ATS" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="550" y="140" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="B-DATA" value="«block»&#10;B-DATA&#10;Datos y proveniencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="370" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="part-B-DATA" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;startArrow=diamond;startFill=1;endArrow=none;" edge="1" parent="1" source="B-PLATFORM" target="B-DATA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B-AI" value="«block»&#10;B-AI&#10;IA y estrategia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="370" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="part-B-AI" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;startArrow=diamond;startFill=1;endArrow=none;" edge="1" parent="1" source="B-PLATFORM" target="B-AI">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B-SIM" value="«block»&#10;B-SIM&#10;Simulación y evaluación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="370" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="part-B-SIM" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;startArrow=diamond;startFill=1;endArrow=none;" edge="1" parent="1" source="B-PLATFORM" target="B-SIM">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B-RISK" value="«block»&#10;B-RISK&#10;Riesgo y parada" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="590" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="part-B-RISK" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;startArrow=diamond;startFill=1;endArrow=none;" edge="1" parent="1" source="B-PLATFORM" target="B-RISK">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B-ACCESS" value="«block»&#10;B-ACCESS&#10;Acceso y aprobación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="590" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="part-B-ACCESS" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;startArrow=diamond;startFill=1;endArrow=none;" edge="1" parent="1" source="B-PLATFORM" target="B-ACCESS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B-OMS" value="«block»&#10;B-OMS&#10;Órdenes y persistencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="590" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="part-B-OMS" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;startArrow=diamond;startFill=1;endArrow=none;" edge="1" parent="1" source="B-PLATFORM" target="B-OMS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B-ADAPTER" value="«block»&#10;B-ADAPTER&#10;Adaptadores FIX / API" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="810" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="part-B-ADAPTER" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;startArrow=diamond;startFill=1;endArrow=none;" edge="1" parent="1" source="B-PLATFORM" target="B-ADAPTER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B-RECON" value="«block»&#10;B-RECON&#10;Libro y reconciliación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="810" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="part-B-RECON" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;startArrow=diamond;startFill=1;endArrow=none;" edge="1" parent="1" source="B-PLATFORM" target="B-RECON">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B-AUDIT" value="«block»&#10;B-AUDIT&#10;Auditoría y métricas" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="810" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="part-B-AUDIT" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;startArrow=diamond;startFill=1;endArrow=none;" edge="1" parent="1" source="B-PLATFORM" target="B-AUDIT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B-ENGINEERING" value="«block»&#10;B-ENGINEERING&#10;Configuración, requisitos y evidencia&#10;Soporte fuera del runtime" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="140" width="400" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="eng" value="«trace»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="B-ENGINEERING" target="B-PLATFORM">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="04" name="04 Internal interfaces">
+    <mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="ibd [B-PLATFORM] — partes e interfaces v1 propuestas" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="B-DATA" value="data: B-DATA&#10;Datos y proveniencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="180" width="360" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="B-AI" value="ai: B-AI&#10;IA y estrategia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="510" y="180" width="360" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="B-SIM" value="sim: B-SIM&#10;Simulación y evaluación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="180" width="360" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="B-ACCESS" value="access: B-ACCESS&#10;Acceso y aprobación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="450" width="360" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="B-RISK" value="risk: B-RISK&#10;Riesgo y parada" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="510" y="450" width="360" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="B-OMS" value="oms: B-OMS&#10;Órdenes y persistencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="450" width="360" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="B-AUDIT" value="audit: B-AUDIT&#10;Auditoría y métricas" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="790" width="360" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="B-RECON" value="recon: B-RECON&#10;Libro y reconciliación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="510" y="790" width="360" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="B-ADAPTER" value="adapter: B-ADAPTER&#10;Adaptadores FIX / API" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="790" width="360" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="if-0" value="IF-01 MarketEvent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-DATA" target="B-AI">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="if-1" value="IF-02 StrategyProposal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-AI" target="B-SIM">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="if-2" value="IF-03 OrderIntent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-AI" target="B-RISK">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="if-3" value="Aprobación por entorno" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-ACCESS" target="B-RISK">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="if-4" value="IF-04 RiskDecision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-RISK" target="B-OMS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="if-5" value="Orden autorizada" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-OMS" target="B-ADAPTER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="if-6" value="IF-05 ExecutionReport" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-ADAPTER" target="B-OMS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="if-7" value="IF-05 Fill" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-ADAPTER" target="B-RECON">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="if-8" value="IF-06 PositionSnapshot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-RECON" target="B-RISK">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="if-9" value="IF-07 AuditEvent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-RECON" target="B-AUDIT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ops" value="Operaciones&#10;Actor externo" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1040" width="330" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kill" value="IF-08 EmergencyCommand" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="ops" target="B-RISK">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="venue" value="Venue simulado / externo" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="1040" width="360" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="orders" value="Órdenes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="B-ADAPTER" target="venue">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="reports" value="Reportes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="venue" target="B-ADAPTER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="IF-07: todos los bloques emiten eventos correlacionados a B-AUDIT.&#10;B-SIM usa IF-01 y propone IF-03 en paper. Valores decimales / UTC / versión / entorno.&#10;Los flujos indican contratos entre partes; detalle de puertos pendiente de diseño." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1030" width="540" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="05" name="05 Activity">
+    <mxGraphModel dx="1500" dy="1390" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1390" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="act [Intención a reconciliación] — denegación por defecto" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1440" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="start" value="Inicio" style="ellipse;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="630" y="120" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="data" value="Validar datos y propuesta" style="rounded=1;arcSize=15;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="220" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="valid" value="¿Datos válidos?" style="shape=rhombus;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="340" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="intent" value="Versionar intención" style="rounded=1;arcSize=15;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="490" width="320" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="permit" value="¿Riesgo, aprobación y&#10;kill switch permiten?" style="shape=rhombus;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="580" y="620" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="persist" value="Persistir y deduplicar" style="rounded=1;arcSize=15;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="800" width="320" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="send" value="Enviar al venue simulado" style="rounded=1;arcSize=15;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="930" width="320" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="recon" value="Deduplicar fills y reconciliar" style="rounded=1;arcSize=15;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1090" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="finish" value="Fin / evidencia" style="ellipse;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1270" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="act-0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="start" target="data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="data" target="valid">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act-2" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="valid" target="intent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="intent" target="permit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act-4" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="permit" target="persist">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="persist" target="send">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="send" target="recon">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="recon" target="finish">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="reject" value="Rechazar / auditar&#10;Sin envío" style="rounded=1;arcSize=15;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f8cecc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="530" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="invalid" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="valid" target="reject">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="denied" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="permit" target="reject">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rejected" value="Evidencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="reject" target="finish">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="unknown" value="Timeout / estado Unknown&#10;Bloquear nuevos envíos&#10;Resolver por reconciliación" style="rounded=1;arcSize=15;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="930" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="timeout" value="Timeout" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="send" target="unknown">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="resolve" value="Consulta / reportes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="unknown" target="recon">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mismatch" value="Mismatch / alerta&#10;Bloquear cuenta" style="rounded=1;arcSize=15;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f8cecc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="1120" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="mismatch-e" value="Diferencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="recon" target="mismatch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="blocked" value="Evidencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;" edge="1" parent="1" source="mismatch" target="finish">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="06" name="06 Verification">
+    <mxGraphModel dx="1600" dy="1910" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1910" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="req [Satisfacción y verificación] — relaciones previstas; pruebas aún pendientes" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-001" value="«block» B-DATA&#10;Datos y proveniencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="120" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-001" value="«requirement» ATS-F-001&#10;Datos canónicos" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="120" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-001" value="«testCase» TC-001&#10;Planificado: Datos canónicos" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="120" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-001" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-001" target="ATS-F-001">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-001" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-001" target="ATS-F-001">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-002" value="«block» B-DATA&#10;Datos y proveniencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="215" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-002" value="«requirement» ATS-F-002&#10;Proveniencia y replay" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="215" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-002" value="«testCase» TC-002&#10;Planificado: Proveniencia y replay" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="215" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-002" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-002" target="ATS-F-002">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-002" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-002" target="ATS-F-002">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-003" value="«block» B-AI&#10;IA y estrategia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="310" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-003" value="«requirement» ATS-F-003&#10;Propuestas de IA" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="310" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-003" value="«testCase» TC-003&#10;Planificado: Propuestas de IA" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="310" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-003" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-003" target="ATS-F-003">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-003" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-003" target="ATS-F-003">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-004" value="«block» B-SIM&#10;Simulación y evaluación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="405" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-004" value="«requirement» ATS-F-004&#10;Validación de estrategia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="405" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-004" value="«testCase» TC-004&#10;Planificado: Validación de estrategia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="405" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-004" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-004" target="ATS-F-004">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-004" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-004" target="ATS-F-004">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-005" value="«block» B-RISK&#10;Riesgo y parada" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="500" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-005" value="«requirement» ATS-F-005&#10;Riesgo determinista" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="500" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-005" value="«testCase» TC-005&#10;Planificado: Riesgo determinista" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="500" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-005" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-005" target="ATS-F-005">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-005" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-005" target="ATS-F-005">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-006" value="«block» B-ACCESS&#10;Acceso y aprobación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="595" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-006" value="«requirement» ATS-F-006&#10;Autorización y entornos" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="595" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-006" value="«testCase» TC-006&#10;Planificado: Autorización y entornos" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="595" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-006" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-006" target="ATS-F-006">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-006" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-006" target="ATS-F-006">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-007" value="«block» B-OMS&#10;Órdenes y persistencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="690" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-007" value="«requirement» ATS-F-007&#10;Ciclo de orden" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="690" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-007" value="«testCase» TC-007&#10;Planificado: Ciclo de orden" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="690" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-007" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-007" target="ATS-F-007">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-007" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-007" target="ATS-F-007">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-008" value="«block» B-OMS&#10;Órdenes y persistencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="785" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-008" value="«requirement» ATS-F-008&#10;Idempotencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="785" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-008" value="«testCase» TC-008&#10;Planificado: Idempotencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="785" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-008" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-008" target="ATS-F-008">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-008" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-008" target="ATS-F-008">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-009" value="«block» B-ADAPTER&#10;Adaptadores FIX / API" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="880" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-009" value="«requirement» ATS-F-009&#10;Adaptadores" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="880" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-009" value="«testCase» TC-009&#10;Planificado: Adaptadores" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="880" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-009" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-009" target="ATS-F-009">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-009" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-009" target="ATS-F-009">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-010" value="«block» B-RECON&#10;Libro y reconciliación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="975" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-010" value="«requirement» ATS-F-010&#10;Reconciliación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="975" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-010" value="«testCase» TC-010&#10;Planificado: Reconciliación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="975" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-010" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-010" target="ATS-F-010">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-010" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-010" target="ATS-F-010">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-011" value="«block» B-RISK&#10;Riesgo y parada" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1070" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-011" value="«requirement» ATS-F-011&#10;Parada de emergencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1070" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-011" value="«testCase» TC-011&#10;Planificado: Parada de emergencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1070" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-011" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-011" target="ATS-F-011">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-011" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-011" target="ATS-F-011">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-F-012" value="«block» B-AUDIT&#10;Auditoría y métricas" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1165" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-F-012" value="«requirement» ATS-F-012&#10;Auditoría y observabilidad" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1165" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-012" value="«testCase» TC-012&#10;Planificado: Auditoría y observabilidad" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1165" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-F-012" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-F-012" target="ATS-F-012">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-F-012" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-012" target="ATS-F-012">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-N-001" value="«block» B-SIM&#10;Simulación y evaluación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1260" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-N-001" value="«requirement» ATS-N-001&#10;Reproducibilidad" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1260" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-013" value="«testCase» TC-013&#10;Planificado: Reproducibilidad" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1260" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-N-001" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-N-001" target="ATS-N-001">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-N-001" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-013" target="ATS-N-001">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-N-002" value="«block» B-ACCESS&#10;Acceso y aprobación" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1355" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-N-002" value="«requirement» ATS-N-002&#10;Protección de acceso" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1355" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-014" value="«testCase» TC-014&#10;Planificado: Protección de acceso" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1355" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-N-002" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-N-002" target="ATS-N-002">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-N-002" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-014" target="ATS-N-002">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-N-003" value="«block» B-OMS&#10;Órdenes y persistencia" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1450" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-N-003" value="«requirement» ATS-N-003&#10;Recuperación segura" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1450" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-015" value="«testCase» TC-015&#10;Planificado: Recuperación segura" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1450" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-N-003" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-N-003" target="ATS-N-003">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-N-003" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-015" target="ATS-N-003">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-N-004" value="«block» B-ADAPTER&#10;Adaptadores FIX / API" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1545" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-N-004" value="«requirement» ATS-N-004&#10;Contratos versionados" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1545" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-016" value="«testCase» TC-016&#10;Planificado: Contratos versionados" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1545" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-N-004" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-N-004" target="ATS-N-004">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-N-004" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-016" target="ATS-N-004">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-N-005" value="«block» B-AUDIT&#10;Auditoría y métricas" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1640" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-N-005" value="«requirement» ATS-N-005&#10;Rendimiento medible" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1640" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-017" value="«testCase» TC-017&#10;Planificado: Rendimiento medible" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1640" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-N-005" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-N-005" target="ATS-N-005">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-N-005" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-017" target="ATS-N-005">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="block-ATS-N-006" value="«block» B-ENGINEERING&#10;Gestión de ingeniería" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1735" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ATS-N-006" value="«requirement» ATS-N-006&#10;Trazabilidad de ingeniería" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1735" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-018" value="«testCase» TC-018&#10;Planificado: Trazabilidad de ingeniería" style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1735" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="satisfy-ATS-N-006" value="«satisfy»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="block-ATS-N-006" target="ATS-N-006">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-ATS-N-006" value="«verify»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontSize=12;fontColor=#334155;strokeColor=#64748b;endArrow=block;endFill=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="TC-018" target="ATS-N-006">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="Dirección: bloque → requisito; testCase → requisito.&#10;Relaciones satisfy/verify propuestas; no equivalen a pruebas ejecutadas." style="rounded=0;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fillColor=#f1f5f9;strokeColor=#475569;fontColor=#142d4e;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1840" width="1530" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
